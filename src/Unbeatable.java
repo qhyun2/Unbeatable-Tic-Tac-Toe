@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -260,6 +261,9 @@ public class Unbeatable{
 				moves.get(i).score = miniMax(copy, 1).score - 1;
 			}
 		}
+		
+		//scrambles
+		Collections.shuffle(moves);
 
 		// return best scoring one if ai turn, return worst scoring one if player turn
 
